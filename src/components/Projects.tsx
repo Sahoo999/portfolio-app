@@ -14,6 +14,12 @@ const projects = [
         description: "Architected a responsive Ed-tech platform for 35+ test users to create, consume, and rate content with full authentication & authorization. Integrated Razorpay for secure payments, enhancing course enrollment and instructor earnings. Established robust RESTful communication between frontend and backend services and validated all flows using Postman.",
         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Cloudinary"],
         demo: "https://studynotion-by-vivek.vercel.app/"
+    },
+    {
+        title: "CropGuards",
+        description: "An AI-powered platform that detects and analyzes crop diseases in real-time. Allows users to upload images of affected crops and provides comprehensive analysis reports, including treatment recommendations and prevention strategies to help farmers protect their harvest.",
+        tech: ["Next.js", "React", "Tailwind CSS", "Shadcn UI", "AI/ML"],
+        demo: "https://cropguards.netlify.app/"
     }
 ];
 
