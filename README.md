@@ -163,13 +163,6 @@ erDiagram
 
 ---
 
-## 👥 Contributors
-
-*   **Vivek Panchal** - *Backend & System Architecture*
-*   **vivekpanchal** - *52 contributions*
-
----
-
 <p align="center">
   Made with ❤️ by Debangsu Sahoo
 </p>
