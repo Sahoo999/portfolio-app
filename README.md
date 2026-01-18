@@ -1,162 +1,109 @@
-# 🎓 StudyNotion - EdTech Platform
+# 🌌 Debangsu Sahoo - Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Verified](https://img.shields.io/badge/Verified-Active-green)](https://github.com/Sahoo999/portfolio-app)
-[![MERN Stack](https://img.shields.io/badge/Stack-MERN-blue?logo=react)](https://reactjs.org/)
+[![Verified](https://img.shields.io/badge/Status-Active-green)](https://github.com/Sahoo999/portfolio-app)
+[![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Three.js%20%7C%20Tailwind-blue?logo=react)](https://reactjs.org/)
 
-**StudyNotion** is a fully functional ed-tech platform that enables users to create, consume, and rate educational content. The platform is built using the **MERN stack** (MongoDB, ExpressJS, ReactJS, NodeJS) and aims to provide a seamless interactive learning experience for students while offering instructors a robust platform to showcase their expertise.
+A robust, interactive personal portfolio website designed to showcase backend-heavy full-stack engineering skills. Features a fully immersive **3D Star Field background**, glassmorphism aesthetics, and responsive layout.
+
+![Portfolio Preview](https://via.placeholder.com/1200x600?text=Interactive+3D+Portfolio+Preview)
+*(Replace this link with a real screenshot of your site after deployment)*
 
 ---
 
-## 📑 Table of Contents
-- [✨ Key Features](#-key-features)
-- [💻 Tech Stack](#-tech-stack)
-- [🏰 System Architecture](#-system-architecture)
-- [🗂️ Database Schema](#-database-schema)
-- [🏗️ Architecture Diagram](#-architecture-diagram)
-- [📦 Installation & Setup](#-installation--setup)
+## 🔗 Links
+- **🌍 Live Site**: [https://portfolio-app-sahoo999.vercel.app](https://portfolio-app-sahoo999.vercel.app) *(Update if different)*
+- **📦 Repository**: [github.com/Sahoo999/portfolio-app](https://github.com/Sahoo999/portfolio-app)
 
 ---
 
 ## ✨ Key Features
 
-### 🎓 For Students
-*   **🏠 Homepage**: Engaging landing page with random background visuals and course highlights.
-*   **📚 Course List**: Browse courses with detailed descriptions and ratings.
-*   **💡 Wishlist**: Save courses for later.
-*   **🛒 Cart & Checkout**: Secure course purchase flow using **Razorpay**.
-*   **🎓 Course Content**: Interactive video player and course materials.
-*   **👤 User Profile**: Manage account details and view enrolled courses.
-
-### 👩‍🏫 For Instructors
-*   **📊 Dashboard**: Real-time overview of course performance and earnings.
-*   **📈 Insights**: Detailed analytics on views and clicks.
-*   **🛠️ Course Management**: Create, edit, and publish courses.
-*   **☁️ Media Management**: Seamless upload for videos and resources via **Cloudinary**.
+*   **🌌 3D Interactive Background**: Custom particle star field built with **Three.js** and **React Fiber** that rotates and provides depth.
+*   **💻 Terminal Hero Section**: A unique "Code Terminal" introduction that reflects a developer-first persona.
+*   **🎨 Glassmorphism Design**: Modern, frosted-glass UI elements using clear visual hierarchy.
+*   **⚡ High Performance**: Built with **Vite** for instant loading and **Framer Motion** for butter-smooth transitions.
+*   **📱 Fully Responsive**: Optimized experience across Desktop, Tablet, and Mobile.
 
 ---
 
-## 💻 Tech Stack
+## 🏗️ System Architecture
 
-### Frontend 🎨
-*   ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) **ReactJS**: Dynamic UI building.
-*   ![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white) **Redux Toolkit**: State management.
-*   ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) **Tailwind CSS**: Styling.
-*   **Framer Motion**: Smooth animations.
-*   **Chart.js**: Data visualization.
-
-### Backend ⚙️
-*   ![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) **Node.js**: Runtime environment.
-*   ![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge) **Express.js**: Web framework.
-*   **JWT**: Secure authentication.
-*   **Razorpay**: Payment gateway integration.
-
-### Database & Cloud 🛢️
-*   ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) **MongoDB**: NoSQL Database.
-*   ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white) **Cloudinary**: Media storage.
-
----
-
-## 🏰 System Architecture
-
-The StudyNotion platform follows a **Client-Server Architecture**:
-
-1.  **Frontend (Client)**: Built with ReactJS, it communicates with the backend via RESTful APIs. It manages consistent state using Redux and creates a responsive UX with Tailwind.
-2.  **Backend (Server)**: Powered by Node.js and Express.js, handling business logic, authentication (AuthN/AuthZ), and payment processing.
-3.  **Database**: MongoDB stores unstructured data like course details, user profiles, and transaction history.
-
-### 🏗️ Architecture Diagram
+The portfolio utilizes a modern Client-Side Rendering (CSR) architecture optimized for interactivity.
 
 ```mermaid
 graph TD
-    Client[Frontend Client (React)]
-    LB[API Gateway / Load Balancer]
-    Server[Backend Server (Node/Express)]
-    DB[(MongoDB Database)]
-    Cloud[Cloudinary CDN]
-    Payment[Razorpay Gateway]
-
-    Client -->|REST API Requests| LB
-    LB --> Server
-    Server -->|Query/Update| DB
-    Server -->|Store/Retrieve Media| Cloud
-    Server -->|Process Payments| Payment
-    Server -->|Auth Responses| Client
-```
-
----
-
-## 🗂️ Database Schema
-
-The high-level data model relationships:
-
-```mermaid
-erDiagram
-    USER ||--o{ COURSE : "enrolled_in"
-    USER ||--o{ RATING : "writes"
-    INSTRUCTOR ||--o{ COURSE : "creates"
-    COURSE ||--o{ SECTION : "contains"
-    SECTION ||--o{ SUB_SECTION : "contains"
-    COURSE ||--o{ RATING : "has"
+    User((👤 User))
+    DNS[🌐 Vercel Edge Network]
     
-    USER {
-        string name
-        string email
-        string password
-        string accountType
-    }
-    COURSE {
-        string courseName
-        string description
-        number price
-        string thumbnail
-    }
-    SECTION {
-        string sectionName
-    }
-    SUB_SECTION {
-        string title
-        string videoUrl
-        string timeDuration
-    }
-```
+    subgraph "Client Side (Browser)"
+        App[⚛️ React Application]
+        
+        subgraph "Visual Engine"
+            R3F[🌌 Three.js / R3F Canvas]
+            Tailwind[🎨 Tailwind CSS]
+            Motion[✨ Framer Motion]
+        end
+        
+        subgraph "Core Components"
+            Hero[Hero (Terminal)]
+            Bg[3D Star Field]
+            Projects[Project Cards]
+            Contact[Actions]
+        end
+    end
 
----
+    User -->|HTTPS Request| DNS
+    DNS -->|Delivers Static Bundle| App
+    
+    App -->|Initializes| R3F
+    App -->|Styles| Tailwind
+    App -->|Animates| Motion
+    
+    R3F --> Bg
+    App --> Hero
+    App --> Projects
+--
+## 💻 Tech Stack
+Domain	Technologies
+Core	React 18, TypeScript, Vite
+Styling	Tailwind CSS, PostCSS
+3D & Graphics	Three.js, React Three Fiber, React Three Drei, Maath
+Animations	Framer Motion
+Icons	Lucide React
 
-## 📦 Installation & Setup
+--
+ ## 📂 Project Structure
+src/
+├── components/
+│   ├── Background3D.tsx   # 🌌 The 3D Star Field Component
+│   ├── Hero.tsx           # 💻 Terminal Intro Section
+│   ├── About.tsx          # 📊 Tech Stack Grid
+│   ├── Projects.tsx       # 🚀 Project Showcases
+│   └── Contact.tsx        # 📬 Contact CTA
+├── App.tsx                # Main Layout Assembly
+└── index.css              # Global Tailwind Directives
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/Sahoo999/portfolio-app.git
-    cd portfolio-app
-    ```
+--
+## 🚀 Installation & Local Run
+Clone the repository:
+bash
+git clone [https://github.com/Sahoo999/portfolio-app.git](https://github.com/Sahoo999/portfolio-app.git)
+cd portfolio-app
+Install dependencies:
+bash
+npm install
+Run the development server:
+bash
+npm run dev
+Open http://localhost:5173 to view it in the browser.
+🤝 Contact
+I'm currently looking for new opportunities in Backend & Full Stack development.
 
-2.  **Install Frontend Dependencies**:
-    ```bash
-    cd src
-    npm install
-    ```
-
-3.  **Install Backend Dependencies** (if applicable in monorepo):
-    ```bash
-    cd server
-    npm install
-    ```
-
-4.  **Environment Setup**:
-    Create a `.env` file and add your credentials:
-    ```env
-    MONGO_URL=your_mongodb_url
-    JWT_SECRET=your_secret
-    CLOUDINARY_URL=your_cloudinary_url
-    ```
-
-5.  **Run the Project**:
-    ```bash
-    npm run dev
-    ```
-
----
+Email: 
+sahoodebangsu@gmail.com
+LinkedIn: Debangsu Sahoo
+--
 
 <p align="center">
   Made with ❤️ by Debangsu Sahoo
