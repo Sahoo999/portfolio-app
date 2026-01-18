@@ -5,10 +5,12 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Background3D from './components/Background3D';
 
 function App() {
   return (
-    <div className="bg-[#0f172a] min-h-screen text-white selection:bg-blue-500/30">
+    <div className="min-h-screen text-white selection:bg-blue-500/30 relative">
+      <Background3D />
       <Navbar />
       <Hero />
       <About />
