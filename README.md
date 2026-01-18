@@ -81,26 +81,10 @@ src/
 └── index.css              # Global Tailwind Directives
 
 --
-## 🚀 Installation & Local Run
-Clone the repository:
-bash
-git clone [https://github.com/Sahoo999/portfolio-app.git](https://github.com/Sahoo999/portfolio-app.git)
-cd portfolio-app
-Install dependencies:
-bash
-npm install
-Run the development server:
-bash
-npm run dev
-Open http://localhost:5173 to view it in the browser.
-🤝 Contact
-I'm currently looking for new opportunities in Backend & Full Stack development.
 
 Email: 
 sahoodebangsu@gmail.com
-LinkedIn: Debangsu Sahoo
 --
-
 <p align="center">
   Made with ❤️ by Debangsu Sahoo
 </p>
