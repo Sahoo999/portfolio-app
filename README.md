@@ -5,10 +5,6 @@
 [![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20Three.js%20%7C%20Tailwind-blue?logo=react)](https://reactjs.org/)
 
 A robust, interactive personal portfolio website designed to showcase backend-heavy full-stack engineering skills. Features a fully immersive **3D Star Field background**, glassmorphism aesthetics, and responsive layout.
-
-![Portfolio Preview](https://via.placeholder.com/1200x600?text=Interactive+3D+Portfolio+Preview)
-*(Replace this link with a real screenshot of your site after deployment)*
-
 ---
 
 ## 🔗 Links
@@ -31,12 +27,12 @@ A robust, interactive personal portfolio website designed to showcase backend-he
 
 The portfolio utilizes a modern Client-Side Rendering (CSR) architecture optimized for interactivity.
 
-```mermaid
 graph TD
     User((👤 User))
     DNS[🌐 Vercel Edge Network]
     
-    subgraph "Client Side (Browser)"
+    
+    ## subgraph "Client Side (Browser)"
         App[⚛️ React Application]
         
         subgraph "Visual Engine"
@@ -63,7 +59,7 @@ graph TD
     R3F --> Bg
     App --> Hero
     App --> Projects
---
+
 ## 💻 Tech Stack
 Domain	Technologies
 Core	React 18, TypeScript, Vite
