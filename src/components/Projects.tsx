@@ -1,20 +1,18 @@
 
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Folder } from 'lucide-react';
+import { ExternalLink, Folder } from 'lucide-react';
 
 const projects = [
     {
         title: "DevNaukri",
         description: "Launched a job portal using Next.js, TypeScript, and Tailwind, featuring 60+ jobs from 50+ companies. Achieved 8500+ visitors and 35,000+ page views, connecting job seekers and employers. Utilized PostgreSQL and Prisma ORM to efficiently manage job listings and application data, ensuring robust database performance and scalability.",
         tech: ["TypeScript", "Next.js", "Postgres", "Prisma", "TailwindCss", "Shadcn"],
-        github: "https://github.com/vivek-panchal/devnaukri",
         demo: "https://devnaukri.vercel.app/"
     },
     {
         title: "Study Notion",
         description: "Architected a responsive Ed-tech platform for 35+ test users to create, consume, and rate content with full authentication & authorization. Integrated Razorpay for secure payments, enhancing course enrollment and instructor earnings. Established robust RESTful communication between frontend and backend services and validated all flows using Postman.",
         tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS", "Cloudinary"],
-        github: "https://github.com/vivek-panchal/Ed-Tech-Platform",
         demo: "https://studynotion-by-vivek.vercel.app/"
     }
 ];
@@ -51,9 +49,6 @@ const Projects = () => {
                             <div className="flex justify-between items-start mb-6">
                                 <Folder className="w-10 h-10 text-blue-400" />
                                 <div className="flex gap-4">
-                                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                        <Github size={20} />
-                                    </a>
                                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                         <ExternalLink size={20} />
                                     </a>
