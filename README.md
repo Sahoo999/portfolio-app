@@ -6,10 +6,6 @@
 
 **StudyNotion** is a fully functional ed-tech platform that enables users to create, consume, and rate educational content. The platform is built using the **MERN stack** (MongoDB, ExpressJS, ReactJS, NodeJS) and aims to provide a seamless interactive learning experience for students while offering instructors a robust platform to showcase their expertise.
 
-### 🔗 Links
-- **📺 Explanation Video**: [Watch on YouTube](https://youtu.be/Sv_OFZxmCow)
-- **🌍 Live Demo**: [studynotion-by-vivek.vercel.app](https://studynotion-by-vivek.vercel.app/)
-
 ---
 
 ## 📑 Table of Contents
@@ -19,7 +15,6 @@
 - [🗂️ Database Schema](#-database-schema)
 - [🏗️ Architecture Diagram](#-architecture-diagram)
 - [📦 Installation & Setup](#-installation--setup)
-- [👥 Contributors](#-contributors)
 
 ---
 
